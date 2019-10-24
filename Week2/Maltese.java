@@ -5,7 +5,7 @@ public class Maltese extends Dog{
 
     }
     public void ShowData(){
-            System.out.println("Breed is " + breed +"Size is "+ size + "Age is "+ age + "Color is " + color);
+            //System.out.println("Breed is " + breed +"Size is "+ size + "Age is "+ age + "Color is " + color);
             print20("Breed is ",breed);
             print20("Size is ",size);
             print20("Age is ", age+" years old");
@@ -26,7 +26,7 @@ public class Maltese extends Dog{
 
     }
     public static void main(String[] args) {
-        Maltese maltese =new Maltese("Maltese","Small",2,"White");
+        Maltese maltese = new Maltese("Maltese","Small",2,"White");
         maltese.ShowData();
 
 

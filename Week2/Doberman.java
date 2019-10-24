@@ -8,11 +8,11 @@ public class Doberman extends Dog {
             super(breed_,size_,age_,color_);
             super.showData();
         }
-        public void ShowData(){
-            System.out.println("Breed is " + breed +"Size is "+ size + "Age is "+ age + "Color is " + color);
-        }
+       
 
     public static void main(String[] args) {
-        new Doberman("Doberman","Large",5,"Black");
+       new Doberman("Doberman","Large",5,"Black");
+      
+       
     }
 }
