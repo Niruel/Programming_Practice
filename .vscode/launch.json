@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Exercise7",
+            "request": "launch",
+            "mainClass": "Week3.Exercise7",
+            "projectName": "Programming_Practice_7b5c0b4b"
+        }
+    ]
+}
