@@ -5,6 +5,7 @@
  */
 import java.awt.*;
 import javax.swing.*;
+@SuppressWarnings("serial")
  class Exercise7 extends JFrame {
     int[][] position = {
     {20, 50}, 

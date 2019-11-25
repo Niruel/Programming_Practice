@@ -1,9 +1,13 @@
-/* comment */
+/* Created by: Nicholas Ruppel
+*  Exercise 10(File name is painter10)
+*  Handing in for Review day
+*  2019/11/26
+*/
 
 import java.awt.Graphics;
 import javax.swing.JFrame;
 
-
+@SuppressWarnings("serial")
 public class Painter10 extends JFrame {
 	
 	public Painter10() {
@@ -13,9 +17,9 @@ public class Painter10 extends JFrame {
 	}
 	
 	public void paint(Graphics g) {
-		Face pacman1 = new Face(200, 50, 200, 160);
+		PacMan pacman1 = new PacMan(200, 300, 50, 160);
 		pacman1.make(g);
-		Face pacman2 = new Face(200, 420, 150, 60);
+		PacMan pacman2 = new PacMan(200, 300, 350, 160);
 		pacman2.make(g);
 	}
 

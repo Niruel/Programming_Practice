@@ -1,13 +1,11 @@
 /*
  * Face which is an upper class of three types of PacMan
  * by H.Ogawa on 29 Oct 2019
- * Edited By Nicholas Ruppel
- * filled in Set functions
+ * Edited By Nicholas Ruppel 2019/10/29
  */
 
 import java.awt.Color;
 import java.awt.Graphics;
-
 
 public class Face {
 	private int size;
@@ -30,15 +28,12 @@ public class Face {
 	}
 	
 	public void setSize(int num) {
-		/* Correct this method */
-		if (xCenter != 0) {
+		size = num;
+		if(xCenter != 0) {
 			setXCenter(xCenter);
 		}
-		if (yCenter != 0) {
-			setYCenter(xCenter);
-		}
-		else{
-		size = num;
+		if(yCenter != 0) {
+			setYCenter(yCenter);
 		}
 	}
 	
@@ -47,14 +42,14 @@ public class Face {
 	}
 	
 	public void setXCenter(int num) {
-		/* Correct this method */
-		if (num<size/2) {
-			xCenter = num;
+		if(size != 0) {
+			if(num - size / 2 < 0) {
+				size = num * 2;
+			} else if(num + size / 2 > 500) {
+				size = (500 - num) * 2;
+			}
 		}
-		if ((num+size/2)>400) {
-			xCenter = num;
-		}
-		
+		xCenter = num;
 	}
 	
 	public int getYCenter() {
@@ -62,14 +57,14 @@ public class Face {
 	}
 	
 	public void setYCenter(int num) {
-		/* Correct this method */
-		if (num-size/2<25) {
-			yCenter = num;
+		if(size != 0) {
+			if(num - size / 2 < 25) {
+				size = (num - 25) * 2;
+			} else if(num + size / 2 > 500) {
+				size = (500 - num) * 2;
+			}	
 		}
-		if (num+size/2>300) {
-			yCenter=num;
-		}
-		
+		yCenter = num;
 	}
 	
 	public int getAngle() {
@@ -77,21 +72,16 @@ public class Face {
 	}
 	
 	public void setAngle(int num) {
-		/* Correct this method */
-		if (num<90) {
-			angle=90;
-		}
-		else{
+		if(num > 90) {
+			angle = 90;
+		} else {
 			angle = num;
 		}
-		
 	}
 	
 	public void make(Graphics g) {
 		g.setColor(Color.yellow);
 		g.fillArc(xCenter - size / 2, yCenter - size / 2, 
-									size, size, angle / 2, 360 - angle); 
+							size, size, angle / 2, 360 - angle); 
 	}
-
-
 }

@@ -7,6 +7,7 @@ import javax.swing.*;
  * Nicholas Ruppel 
  * 2019/10/29
  */
+@SuppressWarnings("serial")
 public class Exercise8 extends JFrame {
     int[] size = {60, 40, 90, 120};
     int[][] position = {

@@ -1,8 +1,13 @@
-/* comment */
+/* Created by: Nicholas Ruppel
+*  Exercise 11(File name is painter11)
+*  Handing in for Review day
+*  2019/11/26
+*/
 
 import java.awt.Graphics;
 import javax.swing.JFrame;
 
+@SuppressWarnings("serial")
 public class Painter11 extends JFrame {
 	
 	public Painter11() {

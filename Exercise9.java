@@ -3,11 +3,12 @@ import javax.swing.*;
 
 
 /**
- * Exercise8
+ * Exercise 9
  * Nicholas Ruppel 
  * 2019/10/29
  */
 
+@SuppressWarnings("serial")
 public class Exercise9  extends JFrame{
 
     Exercise9(){

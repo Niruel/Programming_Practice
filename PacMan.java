@@ -1,47 +1,23 @@
-import java.awt.*;
+/*
+ * PacMan
+ * by H.Ogawa on 30/10/2018
+ * Edited By Nicholas Ruppel 2019/10/26
+ */
 
-public class PacMan {
 
-    int size;
-    int xCenter;
-    int yCenter;
-    int angle;
-    public PacMan(){
+import java.awt.Graphics;
 
-    }
-    public PacMan(int size_, int x_, int y_, int angle_){
-        setSize(size_);
-        setXCenter(x_);
-        SetYCenter(y_);
-        setAngle(angle_);
-    }
-   
-    int getSize(){
-        return(size);
-    }
-    void setSize(int num){
-
-    }
-    int getXCenter(){
-        return(xCenter);
-    }
-    void setXCenter(int num){
-
-    }
-    int getYCenter(){
-        return(yCenter);
-    }
-    void SetYCenter(int num){
-
-    }
-    int getAngle(){
-        return(angle);
-    }
-    void setAngle(int num){
-
-    }
-    public void make(Graphics g){
-        g.setColor(Color.yellow);
-        g.fillArc(xCenter-size / 2, yCenter-size/2, size, size, angle/2, 360-size);
-}
+public class PacMan extends Face{
+	
+	public PacMan(int size_, int x_, int y_, int angle_) {
+		//super(size_, x_, y_, angle_);
+		setSize(size_);
+		setXCenter(x_);
+		setYCenter(y_);
+		setAngle(angle_);
+	}
+	
+	public void make(Graphics g) {
+		super.make(g);
+	}
 }
