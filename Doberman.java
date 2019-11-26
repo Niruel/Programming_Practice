@@ -4,14 +4,21 @@
  */
 public class Doberman extends Dog {
 
-        public  Doberman(String breed_, String size_, int age_, String color_){
-            super(breed_,size_,age_,color_);
-            super.showData();
-        }
+    public Doberman() {
+
+	}
+	
+	public Doberman(String breed_, String size_, int age_, String color_) {
+		super.breed = breed_;
+		super.size = size_;
+		super.age = age_;
+		super.color = color_;
+	}
        
 
     public static void main(String[] args) {
-       new Doberman("Doberman","Large",5,"Black");
+        Doberman doberman = new Doberman("Doberman", "Large", 5, "Black");
+		doberman.showData();
       
        
     }

@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Exercise18",
+            "request": "launch",
+            "mainClass": "Exercise18",
+            "projectName": "Programming_Practice_7b5c0b4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Doberman",
+            "request": "launch",
+            "mainClass": "Doberman",
+            "projectName": "Programming_Practice_7b5c0b4b"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Exercise3",
             "request": "launch",
             "mainClass": "Exercise3",

@@ -1,9 +1,12 @@
+/* Created by: Nicholas Ruppel
+*  Handing in for Review day
+*  2019/11/26
+*/
 public class Exercise5 {
 	
 	public void print20(String ss1, String ss2) {
 
 		int num = 20-ss1.length()-ss2.length();
-		//System.out.println(i);
 		System.out.print(ss1);
 		for(int i =0;i<num;i++){
 			System.out.print( " ");
