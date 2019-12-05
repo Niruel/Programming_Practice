@@ -12,7 +12,6 @@ import javax.swing.JTextField;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-@SuppressWarnings("serial")
 public class Exercise18 extends JFrame{
     JButton button1,
             button2;
