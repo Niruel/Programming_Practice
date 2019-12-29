@@ -11,21 +11,109 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Exercise27 extends JFrame implements ActionListener {
     JButton button;
-    JButton button2;
+    BufferedImage bimage;
+    BufferedImage getImage;
+    int rect[][] = { { 0, 0 }, { 0, 0 } };
+    String filename = "image2.jpg";
+    String subFileName = "image2_Copy.jpg";
 
     Exercise27() {
+        setSize(660, 800);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        button = new JButton("Save Image");
+        button.addActionListener(this);
+        button.setActionCommand("btn");
+
+        JPanel panel = new JPanel();
+        panel.add(button);
+
+        getContentPane().add(panel, BorderLayout.NORTH);
+
+        MyListenter myListenter = new MyListenter();
+        addMouseListener(myListenter);
+        addMouseMotionListener(myListenter);
+        takeImage();
+        setVisible(true);
+    }
+
+    public void paint(Graphics g) {
+        int hpostion = 550;
+        g.clearRect(0, 60, 700, 720);
+        if (bimage != null) {
+            g.drawImage(bimage, 10, 60, this);
+        }
+        if (getImage != null) {
+            g.drawImage(getImage, 10, hpostion, this);
+        }
+        g.setColor(Color.red);
+        g.drawRect(rect[0][0], rect[0][1], rect[1][0] - rect[0][0], rect[1][1] - rect[0][1]);
+    }
+
+    public void takeImage() {
+        try {
+            File file = new File(filename);
+            bimage = ImageIO.read(file);
+
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("Error " + e);
+        }
+        repaint();
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        String cmd = e.getActionCommand();
+
+        try {
+            if (cmd.equals("btn")) {
+                File output = new File(subFileName);
+                ImageIO.write(getImage, "jpg", output);
+            }
+        } catch (Exception exception) {
+            // TODO: handle exception
+            System.out.println("Error " + exception);
+        }
 
     }
 
     public static void main(String[] args) {
+        new Exercise27();
+    }
 
+    class MyListenter extends MouseAdapter {
+        int cx;
+        int cy;
+        String str;
+
+        public void mousePressed(MouseEvent e) {
+            rect[0][0] = e.getX();
+            rect[0][1] = e.getY();
+
+        }
+
+        public void mouseReleased(MouseEvent e) {
+            getImage = bimage.getSubimage(rect[0][0] - 30, rect[0][1] - 30, rect[1][0] - rect[0][0],
+                    rect[1][1] - rect[0][1]);
+            repaint();
+        }
+
+        public void mouseDragged(MouseEvent e) {
+            rect[1][0] = e.getX();
+            rect[1][1] = e.getY();
+            repaint();
+        }
     }
 }

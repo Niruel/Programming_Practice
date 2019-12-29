@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Exercise29",
+            "request": "launch",
+            "mainClass": "Exercise29",
+            "projectName": "Programming_Practice_7b5c0b4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Exercise28",
+            "request": "launch",
+            "mainClass": "Exercise28",
+            "projectName": "Programming_Practice_7b5c0b4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Exercise27",
+            "request": "launch",
+            "mainClass": "Exercise27",
+            "projectName": "Programming_Practice_7b5c0b4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Exercise20",
+            "request": "launch",
+            "mainClass": "Exercise20",
+            "projectName": "Programming_Practice_7b5c0b4b"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Exercise26",
             "request": "launch",
             "mainClass": "Exercise26",

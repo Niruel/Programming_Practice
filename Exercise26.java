@@ -71,7 +71,7 @@ public class Exercise26 extends JFrame {
         }
 
         public void mouseReleased(MouseEvent e) {
-            getImage = bimage.getSubimage(rect[0][0] - 30, rect[0][1] - 30, rect[1][0] - rect[0][0],
+            getImage = bimage.getSubimage(rect[0][0] - 10, rect[0][1] - 60, rect[1][0] - rect[0][0],
                     rect[1][1] - rect[0][1]);
             repaint();
         }
